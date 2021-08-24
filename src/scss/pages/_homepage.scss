@@ -1,0 +1,375 @@
+// .loader {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+
+//   > span {
+//     display: inline-block;
+//     background-color: $color-primary;
+//     width: 0;
+//     height: 0;
+//     border-radius: 50%;
+//     margin-right: 8px;
+//     transform: translate3d(0);
+//     animation: bounce 0.6s 6 alternate;
+
+//     &:nth-child(2) {
+//       background-color: $color-secondary;
+//       animation-delay: 0.2s;
+//     }
+
+//     &:nth-child(3) {
+//       animation-delay: 0.4s;
+//     }
+//   }
+// }
+
+// @keyframes bounce {
+//   to {
+//     width: 16px;
+//     height: 16px;
+//     transform: translate3d(0, -16px, 0);
+//   }
+// }
+
+// .outer__container {
+//   opacity: 0;
+//   animation-name: fadein;
+//   animation-duration: 1s;
+//   animation-delay: 4s;
+//   animation-fill-mode: forwards;
+// }
+
+// @keyframes fadein {
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+//Location
+
+.location {
+  position: relative;
+  box-sizing: content-box;
+  width: 100vw;
+  height: 5rem;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(
+      to bottom,
+      darken($color-section, 15%) 20%,
+      $color-section
+    )
+    40;
+  background-color: darken($color-section, 4.6%);
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.fa-map-marker-alt {
+  margin-right: 1rem;
+}
+
+// Explore
+
+.explore {
+  height: 30rem;
+  background-color: $color-section;
+  text-align: center;
+  padding-top: 4rem;
+
+  &__header {
+    margin-bottom: 4rem;
+  }
+
+  &__subheader {
+    margin-left: 3.6rem;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 100;
+  }
+}
+
+// Explanation
+
+.explanation {
+  padding-top: 4rem;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__container {
+    width: 85vw;
+    height: 6.5rem;
+    border: 0;
+    border-radius: 20px;
+    background-color: $color-section;
+    margin-bottom: 3rem;
+    margin-left: 0.8rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & span {
+      position: absolute;
+      left: -1rem;
+      border: 0;
+      border-radius: 50%;
+      background-color: $color-primary;
+      color: $color-white;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+    }
+
+    & .fas {
+      margin-left: 4rem;
+      margin-right: 3rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+// Restaurant
+
+.restaurant {
+  background-color: $color-section;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  & > h2 {
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+  }
+
+  &__card {
+    height: 35vh;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    // padding-bottom: 1.25rem;
+    border: 0;
+    border-radius: 25px;
+    background: $color-white;
+    position: relative;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  &__link {
+    display: flex;
+    flex-flow: column;
+    height: inherit;
+
+    & > img {
+      max-width: 100%;
+      // height: 28vh;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 25px 25px 0 0;
+    }
+  }
+
+  &__description {
+    height: 30%;
+    margin-left: 0.3125rem;
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    position: relative;
+
+    & h3 {
+      margin-bottom: 0.6rem;
+    }
+
+    & span {
+      position: absolute;
+      right: 1.8rem;
+      top: 2.1rem;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__new {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.9rem;
+    border: 0;
+    background-color: $color-tertiary;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      color: darken($color-tertiary, 45%);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .explanation {
+    &__outercontainer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__container {
+      width: 21rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .restaurant {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      width: 35rem;
+      height: 27rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1347px) {
+  .explanation {
+    &__outercontainer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__container {
+      width: 29.5rem;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  .restaurant {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      width: 29rem;
+      height: 27rem;
+
+      &:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+
+      &:last-child {
+        margin-left: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1348px) {
+  .explanation {
+    &__header {
+      text-align: center;
+    }
+
+    &__outercontainer {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &__container {
+      width: 30rem;
+
+      &:first-child {
+        position: relative;
+        top: 95px;
+        // animation: goleft 1s forwards 1.5s, goleft3 1s forwards 8s;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(999px);
+        // animation: goleft2 1s forwards 2.5s, goleft 1s forwards 4.5s,
+        // goleft2 1s forwards 9s;
+      }
+
+      &:last-child {
+        position: relative;
+        top: -95px;
+        opacity: 0;
+        transform: translateX(999px);
+        // animation: goleft2 1s forwards 5.5s, goleft 1s forwards 7s,
+        // goleft5 1s forwards 10s;
+      }
+    }
+  }
+
+  .restaurant {
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__card {
+      width: 31rem;
+    }
+  }
+}
+
+@keyframes goleft {
+  90% {
+    transform: translateX(-999px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(999px);
+    opacity: 0;
+  }
+}
+
+@keyframes goleft2 {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goleft3 {
+  100% {
+    transform: translateX(-45rem);
+    opacity: 1;
+  }
+}
+
+@keyframes goleft4 {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goleft5 {
+  100% {
+    transform: translateX(45rem);
+    opacity: 1;
+  }
+}

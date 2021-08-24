@@ -1,0 +1,57 @@
+.heart-fill {
+  position: absolute;
+  //   top: 2px;
+  background: $color-primary;
+  background: linear-gradient(to top, $color-secondary, $color-primary);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+
+.heart-btn:hover,
+.heart-btn:focus {
+  & .heart-fill {
+    animation: showheartfill 0.5s forwards;
+  }
+
+  & .heart {
+    animation: hideheart 0.5s forwards;
+  }
+}
+
+@keyframes showheartfill {
+  20% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.4;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hideheart {
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .menu__header {
+    & span {
+      &.heart-btn--smallermargin {
+        right: 1rem;
+      }
+    }
+  }
+}

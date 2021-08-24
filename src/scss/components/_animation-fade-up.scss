@@ -1,0 +1,28 @@
+.entrees,
+.main-dish,
+.desserts {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+.entrees {
+  animation: fadeinup 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.main-dish {
+  animation: fadeinup 1.3s forwards;
+  animation-delay: 0.4s;
+}
+
+.desserts {
+  animation: fadeinup 1.5s forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeinup {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

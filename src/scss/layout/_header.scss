@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &__link {
+    position: absolute;
+    left: 25px;
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+}
