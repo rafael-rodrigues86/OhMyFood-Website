@@ -47,7 +47,7 @@
   color: transparent;
 }
 
-.general__container:hover {
+.general__card:hover {
   & .span-dish::after {
     opacity: 1;
     transform: translateX(-6.2rem);
@@ -88,7 +88,7 @@
     transition: opacity 100ms ease 200ms;
   }
 
-  .general__container:hover {
+  .general__card:hover {
     & .hide2 {
       opacity: 0;
     }

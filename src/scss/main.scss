@@ -1,8 +1,13 @@
 @import './utils/variables';
+@import './utils/mixins';
+
 @import './base/base';
+
 // @import './components/header';
 @import './layout/header';
 @import './components/btn';
+
 @import './pages/homepage';
+@import './components/animation-goleft';
 @import './components/heart-btn';
 @import './layout/footer';

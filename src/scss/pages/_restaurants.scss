@@ -46,59 +46,6 @@ main {
   margin-top: 1rem;
 }
 
-.general {
-  margin-left: 3rem;
-
-  &:not(:first-child) {
-    margin-top: 5rem;
-  }
-  &__header {
-    border-bottom: 4px solid $color-tertiary;
-    width: 6.1rem;
-    margin-bottom: 3rem;
-    padding-bottom: 0.3rem;
-
-    & h2 {
-      text-transform: uppercase;
-      font-weight: 300;
-      width: 15rem;
-    }
-  }
-
-  &__container {
-    background-color: $color-white;
-    margin-bottom: 2rem;
-    width: 96%;
-    height: 8rem;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-
-    & h3 {
-      margin-bottom: 0.5rem;
-      margin-left: 1.5rem;
-
-      // & span {
-      //   display: block;
-      // }
-    }
-  }
-
-  &__inner-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 1.5rem;
-  }
-
-  &__price {
-    margin-right: 2rem;
-    font-weight: bold;
-  }
-}
 .btn {
   margin: 5rem auto;
   display: block;
@@ -108,93 +55,12 @@ main {
   margin-top: -8.6rem;
 }
 
-@media screen and (max-width: 360px) {
-  .general {
-    margin-left: 1rem;
-
-    &__container {
-      width: 99%;
-    }
-  }
-}
-
 @media screen and (max-width: 375px) {
   .menu__header {
     & h1 {
       &.menu__h1--smallermargin {
         margin-left: 1rem;
       }
-    }
-  }
-
-  .general {
-    margin-left: 1rem;
-
-    &__container {
-      width: 99%;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .flexbox-container--inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .general {
-    &__container {
-      width: 34.5rem;
-
-      &:nth-child(odd) {
-        margin-right: 4rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1347px) {
-  .flexbox-container--inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .general {
-    &__container {
-      width: 44%;
-
-      &:nth-child(odd) {
-        margin-right: 6rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 1348px) {
-  .flexbox-container {
-    display: flex;
-    margin-top: 3rem;
-  }
-
-  .general {
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
-
-    &:not(:last-child) {
-      // margin-right: 7rem;
-      border-right: 2px solid transparent;
-      border-image: linear-gradient(
-        to bottom,
-        $color-secondary,
-        $color-tertiary
-      );
-      border-image-slice: 1;
-      padding-right: 6rem;
-    }
-
-    &__container {
-      width: 36.5rem;
     }
   }
 }

@@ -1,52 +1,57 @@
-// .loader {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-//   > span {
-//     display: inline-block;
-//     background-color: $color-primary;
-//     width: 0;
-//     height: 0;
-//     border-radius: 50%;
-//     margin-right: 8px;
-//     transform: translate3d(0);
-//     animation: bounce 0.6s 6 alternate;
+  > span {
+    display: inline-block;
+    background-color: $color-primary;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    margin-right: 8px;
+    transform: translate3d(0);
+    animation: bounce 0.6s 6 alternate;
 
-//     &:nth-child(2) {
-//       background-color: $color-secondary;
-//       animation-delay: 0.2s;
-//     }
+    &:nth-child(2) {
+      background-color: $color-secondary;
+      animation-delay: 0.2s;
+    }
 
-//     &:nth-child(3) {
-//       animation-delay: 0.4s;
-//     }
-//   }
-// }
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}
 
-// @keyframes bounce {
-//   to {
-//     width: 16px;
-//     height: 16px;
-//     transform: translate3d(0, -16px, 0);
-//   }
-// }
+@keyframes bounce {
+  to {
+    width: 16px;
+    height: 16px;
+    transform: translate3d(0, -16px, 0);
+  }
+}
 
-// .outer__container {
-//   opacity: 0;
-//   animation-name: fadein;
-//   animation-duration: 1s;
-//   animation-delay: 4s;
-//   animation-fill-mode: forwards;
-// }
+.outer__container {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
 
-// @keyframes fadein {
-//   to {
-//     opacity: 1;
-//   }
-// }
+@keyframes fadein {
+  to {
+    opacity: 1;
+  }
+}
 
+.header {
+  &__h1 {
+    margin: 0;
+  }
+}
 //Location
 
 .location {
@@ -107,8 +112,8 @@
   }
 
   &__container {
-    width: 85vw;
-    height: 6.5rem;
+    width: 88vw;
+    height: 8rem;
     border: 0;
     border-radius: 20px;
     background-color: $color-section;
@@ -117,6 +122,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    @include box-shaddow;
 
     & span {
       position: absolute;
@@ -125,18 +131,31 @@
       border-radius: 50%;
       background-color: $color-primary;
       color: $color-white;
-      width: 3rem;
-      height: 3rem;
+      width: 2.5rem;
+      height: 2.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
 
     & .fas {
       margin-left: 4rem;
       margin-right: 3rem;
       font-size: 2rem;
+    }
+
+    .fa-mobile-alt,
+    .fa-tasks {
+      color: gray;
+    }
+
+    .fa-store {
+      color: $color-primary;
+    }
+
+    & p {
+      font-weight: bold;
     }
   }
 }
@@ -219,16 +238,29 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .explanation {
+    padding-left: 1rem;
+
+    &__header {
+      margin-left: 0.9rem;
+      margin-bottom: 3rem;
+    }
+
     &__outercontainer {
       display: flex;
       flex-direction: row;
     }
 
     &__container {
-      width: 21rem;
+      width: 23rem;
+      height: 7rem;
 
       &:not(:last-child) {
-        margin-right: 3rem;
+        margin-right: 1.5rem;
+      }
+
+      & .fas {
+        margin-left: 3rem;
+        margin-right: 2rem;
       }
     }
   }
@@ -237,6 +269,10 @@
     &__container {
       display: flex;
       flex-wrap: wrap;
+    }
+
+    & h2 {
+      margin-left: 1.5rem;
     }
 
     &__card {
@@ -284,44 +320,6 @@
 }
 
 @media screen and (min-width: 1348px) {
-  .explanation {
-    &__header {
-      text-align: center;
-    }
-
-    &__outercontainer {
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-    }
-
-    &__container {
-      width: 30rem;
-
-      &:first-child {
-        position: relative;
-        top: 95px;
-        // animation: goleft 1s forwards 1.5s, goleft3 1s forwards 8s;
-      }
-
-      &:nth-child(2) {
-        opacity: 0;
-        transform: translateX(999px);
-        // animation: goleft2 1s forwards 2.5s, goleft 1s forwards 4.5s,
-        // goleft2 1s forwards 9s;
-      }
-
-      &:last-child {
-        position: relative;
-        top: -95px;
-        opacity: 0;
-        transform: translateX(999px);
-        // animation: goleft2 1s forwards 5.5s, goleft 1s forwards 7s,
-        // goleft5 1s forwards 10s;
-      }
-    }
-  }
-
   .restaurant {
     &__container {
       display: flex;
@@ -329,47 +327,7 @@
     }
 
     &__card {
-      width: 31rem;
+      width: 30rem;
     }
-  }
-}
-
-@keyframes goleft {
-  90% {
-    transform: translateX(-999px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(999px);
-    opacity: 0;
-  }
-}
-
-@keyframes goleft2 {
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes goleft3 {
-  100% {
-    transform: translateX(-45rem);
-    opacity: 1;
-  }
-}
-
-@keyframes goleft4 {
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes goleft5 {
-  100% {
-    transform: translateX(45rem);
-    opacity: 1;
   }
 }

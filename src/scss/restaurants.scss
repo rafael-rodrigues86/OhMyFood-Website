@@ -1,10 +1,15 @@
 @import './utils/variables';
+@import './utils/mixins';
+
 @import './base/base';
+
 // @import './components/header';
 @import './layout/header';
 @import './components/btn';
+@import './components/flexbox-container';
 @import './pages/restaurants';
 @import './components/heart-btn';
 @import './components/animation-fade-up';
 @import './components/check-animation';
+@import './layout/general-container';
 @import './layout/footer';
