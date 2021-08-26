@@ -7,11 +7,11 @@
   ],
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d docs"
   },
   "author": "Rafael",
   "license": "ISC",
-  "homepage": "https://rafael-rodrigues86.github.io/OhMyFood-Website",
+  "homepage": "https://rafael-rodrigues86.github.io/OhMyFood-Website/",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
