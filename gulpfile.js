@@ -4,14 +4,14 @@ const prefix = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 
 function copyHTML() {
-  return src('./src/html/*.html').pipe(dest('./dist'));
+  return src('./src/html/*.html').pipe(dest('./docs'));
 }
 
 function compilecss() {
   return src('./src/scss/**/*.scss')
     .pipe(sass())
     .pipe(prefix())
-    .pipe(dest('./dist/css'));
+    .pipe(dest('./docs/css'));
 }
 
 // function optimizeImg() {
@@ -22,7 +22,7 @@ function compilecss() {
 //         imagemin.optipng({ optimizationLevel: 3 }),
 //       ])
 //     )
-//     .pipe(dest('./dist/images'));
+//     .pipe(dest('./docs/images'));
 // }
 
 function watchTask() {
